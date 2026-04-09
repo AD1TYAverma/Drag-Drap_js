@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(-45deg,#7c3aed, #1e90ff, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientMove 8s ease infinite;
+
+}
+
+.topbar {
+  padding: 15px;
+  /* background: #7c3aed; */
+  color: white;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.column {
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.column h3 {
+  text-align: center;
+}
+
+.task-list {
+  min-height: 200px;
+}
+
+.task {
+  background: #e2e8f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task button {
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+/* Drag */
+.task-ghost {
+  opacity: 0.4;
+}
+
+.task-chosen {
+  background: #c7d2fe;
+}
+
+
+/* COMMON BUTTON STYLE */
+.btn {
+  border: none;
+  outline: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+/* ADD BUTTON */
+.btn-add {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(124, 58, 237, 0.3);
+}
+
+/* DELETE BUTTON */
+.btn-delete {
+  background: #ef4444;
+  color: white;
+  padding: 4px 8px;
+}
+
+.btn-delete:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+/* TASK BUTTON ALIGN */
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-edit {
+  background: #3b82f6;
+  color: white;
+  padding: 4px 8px;
+}
+
+.btn-edit:hover {
+  background: #2563eb;
+  transform: scale(1.1);
+}
+
+/* Animation keyframes */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .board {
+    grid-template-columns: 1fr;
+  }
+}
