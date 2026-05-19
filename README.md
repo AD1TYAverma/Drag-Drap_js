@@ -1,4 +1,4 @@
-# Drag and Drop Project
+# Drag and Drop JS Project
 
 This is a simple Drag and Drop project built using HTML, CSS, and JavaScript. It allows users to drag an element and drop it into a designated area using the HTML5.
 
